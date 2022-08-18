@@ -47,29 +47,28 @@ function App() {
   }
 
   const _whoList: Array<Clue> = [];
-  _whoList.push(new Clue("Who", "Man1"));
-  _whoList.push(new Clue("Who", "Man2"));
-  _whoList.push(new Clue("Who", "Man3"));
-  _whoList.push(new Clue("Who", "Man4"));
-  _whoList.push(new Clue("Who", "Man5"));
-  _whoList.push(new Clue("Who", "Man6"));
+  _whoList.push(new Clue("Who", "Sir Squeak"));
+  _whoList.push(new Clue("Who", "Sammy Stickman"));
+  _whoList.push(new Clue("Who", "Wallace Waffle"));
+  _whoList.push(new Clue("Who", "Mollie Model-3"));
+  _whoList.push(new Clue("Who", "Big Bertha"));
+  _whoList.push(new Clue("Who", "Holly the Hideous"));
 
   const _whatList: Array<Clue> = [];
-  _whatList.push(new Clue("What", "Weapon1"));
-  _whatList.push(new Clue("What", "Weapon2"));
-  _whatList.push(new Clue("What", "Weapon3"));
-  _whatList.push(new Clue("What", "Weapon4"));
-  _whatList.push(new Clue("What", "Weapon5"));
-  _whatList.push(new Clue("What", "Weapon6"));
+  _whatList.push(new Clue("What", "The Bonker"));
+  _whatList.push(new Clue("What", "Gun of Squirting"));
+  _whatList.push(new Clue("What", "Spoon of Clanking"));
+  _whatList.push(new Clue("What", "FRAAAP!"));
+  _whatList.push(new Clue("What", "Pan of Clanging"));
+  _whatList.push(new Clue("What", "The Foot Destroyer"));
 
   const _whyList: Array<Clue> = [];
-  _whyList.push(new Clue("Why", "Motive1"));
-  _whyList.push(new Clue("Why", "Motive2"));
-  _whyList.push(new Clue("Why", "Motive3"));
-  _whyList.push(new Clue("Why", "Motive4"));
-  _whyList.push(new Clue("Why", "Motive5"));
-  _whyList.push(new Clue("Why", "Motive6"));
-
+  _whyList.push(new Clue("Why", "Free Candy"));
+  _whyList.push(new Clue("Why", "Access to Protected NFT's"));
+  _whyList.push(new Clue("Why", "Needed Hunting Practice"));
+  _whyList.push(new Clue("Why", "Organ 'Donation'"));
+  _whyList.push(new Clue("Why", "Wants a Zombie Friend"));
+  _whyList.push(new Clue("Why", "Add to Skull Collection"));
 
   const [_who] = useState<Clue>(getRandomValue(_whoList));
   const [_what] = useState<Clue>(getRandomValue(_whatList));
@@ -93,7 +92,7 @@ function App() {
     let why = new Clue("Why", String($("#whySelect").val()));
 
     if (who.name && what.name && why.name) {
-      if (_history.length > 8) {
+      if (_history.length > 9) {
         alert("You're out of guesses!");
       }
       else {
@@ -130,7 +129,7 @@ function App() {
       <div className="App">
         <header className="App-header">
 
-          <h1>Choose a Weapon, Suspect and Motive!</h1>
+          <h1>Choose a Suspect, Weapon, and Motive!</h1>
 
           {/* <div>{_who.name}, {_what.name}, {_why.name}</div> */}
 
