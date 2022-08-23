@@ -57,7 +57,7 @@ function App() {
   const _whatList: Array<Clue> = [];
   _whatList.push(new Clue("What", "The Bonker"));
   _whatList.push(new Clue("What", "Gun of Squirting"));
-  _whatList.push(new Clue("What", "Spoon of Clanking"));
+  _whatList.push(new Clue("What", "Spoon of Clunking"));
   _whatList.push(new Clue("What", "FRAAAP!"));
   _whatList.push(new Clue("What", "Pan of Clanging"));
   _whatList.push(new Clue("What", "The Foot Destroyer"));
@@ -135,15 +135,15 @@ function App() {
 
           <div className="form-group">
             <select id="whoSelect" className="selectpicker col-md-4">
-              <option key="0" value="">-Select Who-</option>
+              <option key="0" value="">-Select Suspect-</option>
               {renderClueSelectOptions(_whoList)}
             </select>
             <select id="whatSelect" className="selectpicker col-md-4">
-              <option key="0" value="">-Select What-</option>
+              <option key="0" value="">-Select Weapon-</option>
               {renderClueSelectOptions(_whatList)}
             </select>
             <select id="whySelect" className="selectpicker col-md-4">
-              <option key="0" value="">-Select Why-</option>
+              <option key="0" value="">-Select Motive-</option>
               {renderClueSelectOptions(_whyList)}
             </select>
             <button onClick={handleGuess}>Submit Guess!</button>
